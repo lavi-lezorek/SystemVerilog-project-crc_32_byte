@@ -49,7 +49,7 @@ import crc_32_byte_constants_and_functions ::*;
 		end else begin
 			if(crc_en == 1'b1) begin
 				crc_next = crc_next ^ {revers_byts(data_in), 24'd0};
-				for(int i = 0; i < 8; i++) begin
+				for(integer i = 0; i < 8; i++) begin
 					if(crc_next[31] == 1'b1) begin
 						crc_next = {crc_next[30:0], 1'b0} ^ CRC_POLY;
 					end else begin

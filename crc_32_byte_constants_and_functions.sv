@@ -4,14 +4,14 @@ package crc_32_byte_constants_and_functions;
 	
 	//for always_comb only
 	function logic [7:0] revers_byts(logic [7:0] data_to_revers = 8'd0);
-		for(int i = 0; i < 8; i++) begin
+		for(integer i = 0; i < 8; i++) begin
 			revers_byts[i] = data_to_revers[7-i];
 		end
 	endfunction
 	
 	function logic [31:0] not_reverse_4_byts(logic [31:0] data_to_revers_and_not = 32'd0);
 		begin
-			for (int i = 0; i < 32; i = i + 1) begin
+			for (integer i = 0; i < 32; i = i + 1) begin
 				not_reverse_4_byts[i] = ~data_to_revers_and_not[31-i];
 			end
 		end
