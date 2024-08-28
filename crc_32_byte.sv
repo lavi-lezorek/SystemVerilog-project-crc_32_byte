@@ -1,3 +1,16 @@
+/*
+	crc_32_byte U0
+	(
+		.clk(),
+		.rst_n(),
+		.data_in(),
+		.crc_en(),
+		.clr(),
+		.crc_out(),
+		.crc_ready()
+	);
+*/
+
 module crc_32_byte
 import crc_32_byte_constants_and_functions ::*;
 (
